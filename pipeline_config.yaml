@@ -1,0 +1,17 @@
+connector:
+  name: MSSqlPDConnector
+  # additional connection settings can be added here such as driver, port, etc
+
+writer:
+  name: PDCsvWriter
+  # additional csv settings can be added here such as encoding, separator, etc
+
+pipeline:
+  name: DataPipeline
+  name_chunks: DataChunksPipeline
+  extract_tables:
+    -
+  custom_extracts:
+    - table:
+      query:
+  chunk_size:
